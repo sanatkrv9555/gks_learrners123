@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Types of Bank Accounts</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #f2f2f2, #ffffff);
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        h1 {
+            text-align: center;
+            color: #0b031c;
+            margin-bottom: 40px;
+            font-size: 3em;
+            font-weight: 600;
+        }
+        .account-type {
+            margin-bottom: 30px;
+            border-radius: 8px;
+            overflow: hidden;
+            background: #f9f9f9;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: box-shadow 0.3s;
+        }
+        .account-type:hover {
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .account-type img {
+            width: 100%;
+            height: auto;
+            border-bottom: 2px solid #ddd;
+        }
+        .account-type h2 {
+            background: #034a60;
+            color: #fefdfd;
+            padding: 15px;
+            margin: 0;
+            font-size: 1.8em;
+            font-weight: 600;
+        }
+        .account-type p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin: 10px 20px;
+        }
+        .steps {
+            background: #ffffff;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 10px 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .steps h3 {
+            margin-top: 0;
+            font-size: 1.5em;
+            color: #333;
+        }
+        .steps ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .steps li {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        .steps li:last-child {
+            border-bottom: none;
+        }
+        .important {
+            color: #d9534f;
+            text-align: center;
+            margin-top: 20px;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            background: #333;
+            color: #fff;
+            border-radius: 0 0 10px 10px;
+        }
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+            }
+            .account-type h2 {
+                font-size: 1.5em;
+            }
+            .steps h3 {
+                font-size: 1.2em;
+            }
+            .steps p {
+                font-size: 1em;
+            }
+            footer {
+                padding: 8px;
+                font-size: 0.9em;
+            }
+        }
+        #front img{
+            height:400px;
+            width:600px;
+            margin-left:150px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Types of Bank Accounts</h1>
+        <div class="account-type" id="front">
+            <img src="C:\devlp\bank-building-with-cityscape_1284-52265.avif" alt="">
+        </div>
+        <!-- Checking Account -->
+        <div class="account-type">
+            <img src="C:\devlp\Current-Account.jpg"alt="Checking Account">
+            <h2>1. Current-Account</h2>
+            <p>A current account is designed for frequent transactions. It allows you to deposit and withdraw money, pay bills, and make purchases using checks or debit cards.</p>
+            
+            <div class="steps">
+                <h3>How to Open a Current Account</h3>
+                <ul>
+                    <li>Choose a Bank</li>
+                    <li>Gather Necessary Documents</li>
+                    <li>Visit the Bank or Apply Online</li>
+                    <li>Complete the Application Form</li>
+                    <li>Make an Initial Deposit</li>
+                    <li>Review and Sign</li>
+                    <li>Receive Account Details</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Savings Account -->
+        <div class="account-type">
+            <img src="C:\devlp\savings-account.png" alt="Savings Account">
+            <h2>2. Savings Account</h2>
+            <p>A savings account is intended for saving money over time. It typically offers interest on your balance and has fewer transaction features compared to a checking account.</p>
+
+            <div class="steps">
+                <h3>How to Open a Savings Account</h3>
+                <ul>
+                    <li>Choose a Bank</li>
+                    <li>Gather Required Documents</li>
+                    <li>Visit the Bank or Apply Online</li>
+                    <li>Complete the Savings Account Application</li>
+                    <li>Deposit Funds into Your Account</li>
+                    <li>Review Terms and Conditions</li>
+                    <li>Receive Account Information</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Certificate of Deposit (CD) -->
+        <div class="account-type">
+            <img src="C:\devlp\pngtree-certificate-of-deposit-scum-store-patent-vector-png-image_30396098.png" alt="Certificate of Deposit">
+            <h2>3. Certificate of Deposit (CD)</h2>
+            <p>A Certificate of Deposit (CD) is a time deposit account that pays a fixed interest rate for a specified term. Funds are locked in until the term ends, but CDs often offer higher interest rates than savings accounts.</p>
+
+            <div class="steps">
+                <h3>How to Open a CD</h3>
+                <ul>
+                    <li>Research CD Options</li>
+                    <li>Prepare Your Documents</li>
+                    <li>Select a Bank and Term Length</li>
+                    <li>Open the CD Account</li>
+                    <li>Deposit the Funds</li>
+                    <li>Understand Penalties for Early Withdrawal</li>
+                    <li>Receive Your CD Terms and Account Information</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Money Market Account -->
+        <div class="account-type">
+            <img src="C:\devlp\Money-Market.webp" alt="Money Market Account">
+            <h2>4. Money Market Account</h2>
+            <p>A Money Market Account (MMA) combines features of savings and checking accounts. It often offers higher interest rates but may require a higher minimum balance and limit the number of transactions.</p>
+
+            <div class="steps">
+                <h3>How to Open a Money Market Account</h3>
+                <ul>
+                    <li>Choose a Bank or Financial Institution</li>
+                    <li>Gather Your Documents</li>
+                    <li>Apply Online or In-Person</li>
+                    <li>Complete the Application</li>
+                    <li>Deposit Funds</li>
+                    <li>Review Account Terms</li>
+                    <li>Receive Account Details</li>
+                </ul>
+            </div>
+        </div>
+
+        <p class="important">Note: Ensure you review the terms and conditions of each account type before opening to understand the associated fees, interest rates, and features.</p>
+    </div>
+
+    <footer>
+        &copy; 2024 Learners
+    </footer>
+
+</body>
+</html>

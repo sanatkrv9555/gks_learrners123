@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> EMI Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #a5bff4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            max-width: 100%;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 10px;
+            background-color: rgb(16, 85, 114);
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #03101f;
+        }
+
+        #result {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #e9ecef;
+            border-radius: 5px;
+        }
+
+        .result-item {
+            margin-bottom: 10px;
+        }
+
+        .result-item span {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Your EMI Calculator</h1>
+        <form id="emi-form">
+            <div class="form-group">
+                <label for="salary">Monthly Salary ($):</label>
+                <input type="number" id="salary" name="salary" required>
+            </div>
+            <div class="form-group">
+                <label for="loan-amount">Loan Amount ($):</label>
+                <input type="number" id="loan-amount" name="loan-amount" required>
+            </div>
+            <div class="form-group">
+                <label for="interest-rate">Annual Interest Rate (%):</label>
+                <input type="number" id="interest-rate" name="interest-rate" step="0.01" required>
+            </div>
+            <div class="form-group">
+                <label for="loan-term">Loan Term (years):</label>
+                <input type="number" id="loan-term" name="loan-term" required>
+            </div>
+            <button type="button" onclick="calculateEMI()">Calculate EMI</button>
+        </form>
+        <div id="result">
+            <div class="result-item">
+                <span>EMI Amount:</span> $<span id="emi-amount">0.00</span>
+            </div>
+            <div class="result-item">
+                <span>Total Payment:</span> $<span id="total-payment">0.00</span>
+            </div>
+            <div class="result-item">
+                <span>Affordability:</span> <span id="affordability">-</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function calculateEMI() {
+            const salary = parseFloat(document.getElementById('salary').value);
+            const loanAmount = parseFloat(document.getElementById('loan-amount').value);
+            const annualInterestRate = parseFloat(document.getElementById('interest-rate').value);
+            const loanTermYears = parseInt(document.getElementById('loan-term').value);
+
+            if (isNaN(salary) || isNaN(loanAmount) || isNaN(annualInterestRate) || isNaN(loanTermYears)) {
+                alert('Please fill in all fields correctly.');
+                return;
+            }
+
+            const monthlyInterestRate = (annualInterestRate / 100) / 12;
+            const numberOfMonths = loanTermYears * 12;
+
+            const emi = (loanAmount * monthlyInterestRate * Math.pow(1 + monthlyInterestRate, numberOfMonths)) /
+                        (Math.pow(1 + monthlyInterestRate, numberOfMonths) - 1);
+
+            const totalPayment = emi * numberOfMonths;
+            const emiAmount = emi.toFixed(2);
+            const totalPaymentAmount = totalPayment.toFixed(2);
+            const affordability = emi > salary * 0.5 ? 'Not Affordable' : 'Affordable';
+
+            document.getElementById('emi-amount').textContent = emiAmount;
+            document.getElementById('total-payment').textContent = totalPaymentAmount;
+            document.getElementById('affordability').textContent = affordability;
+        }
+    </script>
+</body>
+</html>

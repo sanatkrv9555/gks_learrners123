@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Open a Bank Account</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: radial-gradient(circle, rgb(158, 142, 174) 0%, rgb(125, 111, 174) 100%);
+            color: #333;
+            overflow-x: hidden;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            position: relative;
+        }
+        h1 {
+            text-align: center;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: #4d0710;
+            margin-bottom: 20px;
+            font-size: 2.5em;
+            font-weight: 600;
+            margin:30px;
+        }
+        .step {
+            background: #ffffff;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgb(18, 14, 15);
+            position: relative;
+            height:100px;
+            margin:30px 20px 30px 20px;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            transition: transform 0.4s, box-shadow 0.4s;
+        }
+        .step:hover {
+            transform: scale(1.03);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+        .step::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: -20px;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 10px 20px 10px 0;
+            border-color: transparent #007bff transparent transparent;
+            transform: translateY(-50%);
+        }
+        .step-number {
+            font-size: 2em;
+            font-weight: bold;
+            color: #007bff;
+            margin-bottom: 10px;
+        }
+        .step-description {
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
+        .important {
+            color: #d9534f;
+            text-align: center;
+            margin-top: 20px;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            background: #1d2a38;
+            color: #fff;
+            border-radius: 0 0 10px 10px;
+        }
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+            }
+            .step {
+                margin-bottom: 15px;
+                padding: 15px;
+            }
+            .step-number {
+                font-size: 1.5em;
+            }
+            .step-description {
+                font-size: 1em;
+            }
+            footer {
+                padding: 8px;
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>HOW TO OPEN A BANK ACCOUNT</h1>
+
+        <div class="step">
+            <div class="step-number">1</div>
+            <div class="step-description">
+                <strong>Choose a Bank:</strong> Research and select a bank that suits your needs. Consider factors such as location, fees, and services offered.
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="step-number">2</div>
+            <div class="step-description">
+                <strong>Prepare Your Documents:</strong> Gather the required documents, including a government-issued ID, proof of address, and your Social Security Number or Tax Identification Number.
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="step-number">3</div>
+            <div class="step-description">
+                <strong>Visit the Bank:</strong> Go to a branch of the chosen bank or visit their website if they offer online account opening.
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="step-number">4</div>
+            <div class="step-description">
+                <strong>Fill Out an Application:</strong> Complete the application form with your personal information, such as name, address, and employment details.
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="step-number">5</div>
+            <div class="step-description">
+                <strong>Deposit Funds:</strong> Make an initial deposit if required. Some banks require a minimum deposit to open an account.
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="step-number">6</div>
+            <div class="step-description">
+                <strong>Review and Sign:</strong> Review the account terms and conditions. Sign any necessary documents to finalize the account opening process.
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="step-number">7</div>
+            <div class="step-description">
+                <strong>Receive Account Details:</strong> Once your account is open, you will receive your account details, such as your account number and routing number.
+            </div>
+        </div>
+
+        <p class="important">Note: Different banks may have slightly different procedures, so it's a good idea to check with your chosen bank for their specific requirements.</p>
+    </div>
+
+    <footer>
+        &copy; 2024 FinTech
+    </footer>
+
+</body>
+</html>
